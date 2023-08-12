@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ARCHIVO CSS DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="../project0/static/css/main.css">
+
+    <title>Pokedex</title>
+</head>
+
+<body>
+
+    <!-- CONTENEDOR GLOBAL -->
+    <main class="contenedor-main">
+
+        <!-- CABECERA -->
+        <header class="cabecera">
+
+            <!-- MENU DE NAVEGACION -->
+            <nav class="navegacion">
+                <a class="icono-nav" href="./project0/index.html">
+                    <img src="../project0/static/img/icono.png" alt="icono">
+                    <span>johtodex</span>
+                </a>
+                <ul class="columna-nav">
+                    <li class="item-nav"><a href="../index.html" active><span>Inicio</span> <img src="../project0/static/img/pokeball.png" alt="inicio"></a></li>
+                    <li class="item-nav"><a href="../project0/liga.html"><span>Liga</span><img src="../project0/static/img/trofeo.png" alt="liga"></a></li>
+                    <li class="item-nav"><a class="active" href="../project0/pokedex.html"><span>Pokedex</span><img class="img-active" src="../project0/static/img/pikachu.png" alt="pokedex"></a></li>
+                    <li class="item-nav"><a href="../project0/juegos.html"><span>Juegos</span><img src="../project0/static/img/juegos.png" alt="juegos"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CONTENEDOR INTERNO DE LA PAGINA -->
+        <div class="contenedor-pokemon">
+
+            <div class="categoria-contenedor">
+                <span class="categoria">
+                    Buscador pokemon
+                </span>
+            </div>
+
+            <div class="pokemon-filters">
+                
+                <input type="radio" name="filtro" id="todos" checked="yes">
+                <label for="todos">Todos</label>
+                
+                <input type="radio" name="filtro" id="normal">
+                <label for="normal">Normal</label>
+                
+                <input type="radio" name="filtro" id="electrico">
+                <label for="electrico">Electrico</label>
+                
+                <input type="radio" name="filtro" id="planta">
+                <label for="planta">Planta</label>
+                
+                <input type="radio" name="filtro" id="fuego">
+                <label for="fuego">Fuego</label>
+                
+                <input type="radio" name="filtro" id="agua">
+                <label for="agua">Agua</label>
+
+                <article class="pokemon-box">
+
+                    <div class="pokemon-card planta">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/152.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="planta" >planta</span>
+                        </div>
+                        <span class="name">Chikorita</span>
+                    </div>
+
+                    <div class="pokemon-card planta">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/153.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="planta" >planta</span>
+                        </div>
+                        <span class="name">Bayleef</span>
+                    </div>
+
+                    <div class="pokemon-card planta">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/154.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="planta" >planta</span>
+                        </div>
+                        <span class="name">Meganium</span>
+                    </div>
+
+                    <div class="pokemon-card fuego">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/155.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="fuego" >Fuego</span>
+                        </div>
+                        <span class="name">Cyndaquil</span>
+                    </div>
+
+                    <div class="pokemon-card fuego">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/156.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="fuego" >Fuego</span>
+                        </div>
+                        <span class="name">Quilava</span>
+                    </div>
+
+                    <div class="pokemon-card fuego">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/157.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="fuego" >Fuego</span>
+                        </div>
+                        <span class="name">Typhlosion</span>
+                    </div>
+
+                    <div class="pokemon-card agua">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/158.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="agua" >Agua</span>
+                        </div>
+                        <span class="name">Totodile</span>
+                    </div>
+
+                    <div class="pokemon-card agua">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/159.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="agua" >Agua</span>
+                        </div>
+                        <span class="name">Croconaw</span>
+                    </div>
+
+                    <div class="pokemon-card agua">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/160.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="agua" >Agua</span>
+                        </div>
+                        <span class="name">Feraligatr</span>
+                    </div>
+
+                    <div class="pokemon-card normal">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/161.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="normal" >Normal</span>
+                        </div>
+                        <span class="name">Sentret</span>
+                    </div>
+
+                    <div class="pokemon-card normal">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/162.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="normal" >Normal</span>
+                        </div>
+                        <span class="name">Furret</span>
+                    </div>
+
+                    <div class="pokemon-card electrico">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/172.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="electrico" >Electrico</span>
+                        </div>
+                        <span class="name">Pichu</span>
+                    </div>
+
+                    <div class="pokemon-card electrico">
+                        <div class="poke">
+                            <img src="./static/img/pokemon/239.png" alt="">
+                        </div>
+                        <div class="tipos">
+                            <span class="electrico" >Electrico</span>
+                        </div>
+                        <span class="name">Elekid</span>
+                    </div>
+
+                    
+
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <!-- PIE DE PAGINA -->
+        <footer class="pie-de-pagina">
+            <div class="contenido-footer">
+                <h3>footer</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed alias odio molestiae consectetur autem
+                voluptatum blanditiis
+            </div>
+            <span class="copy">&copy; 2023 - johtodex&reg;, Todos los derechos reservados</span>
+        </footer>
+
+    </main>
+
+    <!-- ARCHIVO JS DE BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

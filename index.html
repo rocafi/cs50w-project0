@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ARCHIVO CSS DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="./project0/static/css/main.css">
+
+    <title>Inicio</title>
+</head>
+
+<body>
+
+    <!-- CONTENEDOR GLOBAL -->
+    <main class="contenedor-main">
+
+        <!-- CABECERA -->
+        <header class="cabecera">
+
+            <!-- MENU DE NAVEGACION -->
+            <nav class="navegacion">
+                <a class="icono-nav" href="./project0/index.html">
+                    <img src="./project0/static/img/icono.png" alt="icono">
+                    <span>johtodex</span>
+                </a>
+                <ul class="columna-nav">
+                    <li class="item-nav"><a class="active" href="./index.html" active><span>Inicio</span> <img
+                                class="img-active" src="./project0/static/img/pokeball.png" alt="inicio"></a></li>
+                    <li class="item-nav"><a href="./project0/liga.html"><span>Liga</span><img
+                                src="./project0/static/img/trofeo.png" alt="liga"></a></li>
+                    <li class="item-nav"><a href="./project0/pokedex.html"><span>Pokedex</span><img
+                                src="./project0/static/img/pikachu.png" alt="pokedex"></a></li>
+                    <li class="item-nav"><a href="./project0/juegos.html"><span>Juegos</span><img
+                                src="./project0/static/img/juegos.png" alt="juegos"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CONTENEDOR INTERNO DE LA PAGINA -->
+        <div class="contenedor-interno">
+
+            <!-- CONTENEDOR DE LA SECCION PRINCIPAL -->
+            <section class="seccion-principal">
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        Region johto
+                    </span>
+                </div>
+                <article class="articulos">
+                    <img src="./project0/static/img/johto1.png" alt="johto" id="img-intro">
+                    <p id="introduccion">
+                        es una región del mundo Pokémon situada al oeste de Kanto. Su paisaje está inspirado en la zona
+                        de Japón llamada región de Kinki y el oeste de la región de Tōkai.
+                        <br><br>
+                        Johto y Kanto forman una sola gran masa de tierra; un continente, en el cual al centro y
+                        dividiendo ambas regiones se encuentra la Meseta Añil, la Liga Pokémon, junto con el Monte Plateado y las Cataratas
+                        Tohjo. Comparte la misma Liga Pokémon con Kanto, solo que con otros miembros del Alto Mando y un nuevo campeón.
+                        <br><br>
+                        El lazo que une ambas regiones viene dado por las Cataratas Tohjo, si bien también está la ruta
+                        27, que sirve de cruce con la Cueva Plateada, integrada en Johto pero separada de los demás lugares. En
+                        lo que a medios de transporte respecta, Johto y Kanto están unidos por el Magnetotren mediante tierra y
+                        por el S.S. Aqua por vía marina.
+                    </p>
+
+                    <ul class="curiosidades">
+                        <li>Los nombres de las ciudades son nombres de plantas o están relacionados con plantas.</li>
+                        <li>El nombre de johto proviene de 城都, que significa castillo</li>
+                        <li>tambien proviene de 条都, literalmente Palacio en forma de celosía, la celosía es un estilo de
+                            ventanas en castillos, pero tambien es el nombre científico de la flor de terciopelo</li>
+                        <li>El nombre en chino de la región Chéngdū 城都 o 城都 Sèhngdōu, son una adaptación del japones,
+                            que significa Capital amurallada.</li>
+                    </ul>
+                </article>
+
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        Geografia
+                    </span>
+                </div>
+
+                <article class="articulos">
+                    <img id="img-geografia" src="./project0/static/img/johto2.jpg" alt="mapa">
+                    <p id="geografia">
+                        Físicamente es muy parecido a Kanto: Es una región casi llana con una meseta al este y un
+                        sistema montañoso al noreste en el cual la cima más alta es el Mt. Plateado. En el centro de la
+                        región se encuentra la cueva oscura, la cual tiene entradas y salidas en diferentes rutas (Ruta
+                        31, Ruta 45 y Ruta 46). Al sur la Cueva Unión que comunica Ciudad Malva con Pueblo Azalea.
+                        También está el Monte Mortero en la Ruta 42.
+                        <br><br>
+                        Johto cuenta con edificios bastante antiguos como las torres de Ciudad Iris y la Torre
+                        Bellsprout. Pero también hay edificios modernos como los de Ciudad Trigal.
+                        <br><br>
+                        Una diferencia notable con Kanto es que Johto posee mucho más campo y zonas rurales, además de
+                        que gran parte de sus ciudades son poblados rurales (concretamente en los videojuegos). De
+                        hecho, Ciudad Trigal y Ciudad Olivo son una de las pocas áreas industrializadas o de cierto
+                        modernismo.
+                    </p>
+
+                    <div class="geo-img">
+                        <img src="./project0/static/img/johto3.jpg" alt="johto-city">
+                        <img src="./project0/static/img/johto4.jpg" alt="johto-city">
+                        <img src="./project0/static/img/johto5.png" alt="johto-city">
+                        <img src="./project0/static/img/johto6.png" alt="johto-city">
+                    </div>
+                </article>
+
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        ciudades
+                    </span>
+                </div>
+
+                <article class="articulos">
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Lugares</th>
+                            <th scope="col">Gimnasio</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Pueblo Primavera</td>
+                            <td>ruta 29,<br> ruta 27</td>
+                            <td>no tiene</td>
+                          </tr>
+                          <tr>
+                            <td>Ciudad Cerezo</td>
+                            <td>ruta29,<br> ruta 30</td>
+                            <td>no tiene</td>
+                          </tr>
+                          <tr>
+                            <td>Ciudad Endrino</td>
+                            <td>ruta helada,<br> ruta 45,<br> guarida dragon</td>
+                            <td>no tiene</td>
+                          </tr>
+                          <tr>
+                            <td>Pueblo Primavera</td>
+                            <td>ruta 29,<br> ruta 27</td>
+                            <td>no tiene</td>
+                          </tr>
+                          <tr>
+                            <td>Ciudad Cerezo</td>
+                            <td>ruta29,<br> ruta 30</td>
+                            <td>no tiene</td>
+                          </tr>
+                          <tr>
+                            <td>Ciudad Endrino</td>
+                            <td>ruta helada,<br> ruta 45,<br> guarida dragon</td>
+                            <td>no tiene</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </article>
+
+            </section>
+
+            <!-- BARRA LATERAL -->
+            <aside class="barra-lateral">
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        app destacada
+                    </span>
+                </div>
+                <div class="aside-fav aside-area">
+                    <img src="./project0/static/img/destacada.jpg" alt="destacada">
+                </div>
+
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        otras apps
+                    </span>
+                </div>
+                <div class="aside-link-apps aside-area">
+                    <a href="">Golden Dex</a>
+                    <a href="">Pokemon Unite</a>
+                    <a href="">Pokemon Café Mix</a>
+                    <a href="">Pokemon sleep</a>
+                </div>
+
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        comparte
+                    </span>
+                </div>
+
+                <div class="compartir-page aside-area">
+                    <a href="" class="facebook">facebook <span>F</span></a>
+                    <a href="" class="reddit">reddit</a>
+                    <a href="" class="snapchat">snapchat</a>
+                    <a href="" class="threads">threads</a>
+                </div>
+
+                <div class="categoria-contenedor">
+                    <span class="categoria">
+                        feedback
+                    </span>
+                </div>
+
+                <div class="feedback aside-area">
+                    <form action="post">
+                        <input type="text" placeholder="dejanos un comentario">
+                        <button>enviar</button>
+                    </form>
+                    
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- PIE DE PAGINA -->
+        <footer class="pie-de-pagina">
+            <div class="contenido-footer">
+                <div class="contenido">
+                    <h4>Que es pokemon?</h4>
+                    <p>Pokémon son criaturas unicas que han sido inventadas por una compania llamada Game Freak. Pokémon, cuyo nombre original en japonés es Poketto Monstaa, se basa en el fanatismo que tenia su creador, Satoshi Tajiri, desde pequeño de coleccionar insectos. Podemos ver a los Pokémon como un hibrido resultante de la unión de varios animales, por ejemplo algunos con caracteristicas de raton como Pikachu o caracteristicas de oso como Cubone.
+                </div>
+                <img src="./project0/static/img/wallpaper.jpg" alt="">
+            </div>
+            <span class="copy">&copy; 2023 - johtodex&reg;, Todos los derechos reservados</span>
+        </footer>
+
+    </main>
+
+    <!-- ARCHIVO JS DE BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

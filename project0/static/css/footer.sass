@@ -1,0 +1,38 @@
+// TAMAÑO COMPUTADOR
+@media screen and (min-width:500px)
+    .pie-de-pagina
+        display: flex
+        flex-direction: column
+        color: #fff
+        .contenido-footer
+            background-color: $footer-bg
+            padding: 4rem
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 2rem
+            justify-content: center
+            align-items: center
+            img
+                width: 70%
+                margin: 0 auto
+        .copy
+            background-color: $footer-bg-dark
+            text-align: center
+            padding: 0.7rem
+
+
+// TAMAÑO MOVIL
+@media screen and (max-width:499px)
+    .pie-de-pagina
+        display: flex
+        flex-direction: column
+        color: #fff
+        .contenido-footer
+            background-color: $footer-bg
+            padding: 2rem
+            img
+                width: 100%
+        .copy
+            background-color: $footer-bg-dark
+            text-align: center
+            padding: 0.7rem

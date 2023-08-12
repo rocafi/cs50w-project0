@@ -1,0 +1,87 @@
+// tamaño computador
+@media screen and (min-width: 500px)
+    .cabecera
+        border: 3px solid $nav-bg-dark-l
+        border-bottom: 3px solid $nav-bg-dark-s
+        background-color: $nav-bg
+        .navegacion
+            margin: 0 4rem
+            height: 4rem
+            display: flex
+            justify-content: space-between
+            align-items: center
+            //================================
+            .icono-nav
+                display: flex
+                align-items: center
+                img
+                    width: 35px
+                    transition: transform 2s ease
+                    &:hover
+                        transform: rotate(-360deg)
+                span
+                    font-family: LastNinja
+                    color: #fff
+                    font-size: 1.1rem
+            //================================
+            .columna-nav
+                display: flex
+                .item-nav
+                    transition: transform 0.15s ease-in-out
+                    &:hover
+                        transform: scale(1.1)
+                    a
+                        span
+                            font-family: Pixelmix
+                            font-size: 1rem
+                            padding: 0.8rem
+                            margin: 0.3rem
+                            color: #fff
+                            border-radius: 1rem
+                            transition: background-color 0.2s ease-in-out
+                            border: 2px solid $nav-bg-dark-l
+                            &:hover
+                                background-color: $nav-bg-dark-l
+                        img
+                            display: none
+
+// TAMAÑO MOVIL
+@media screen and (max-width: 499px)
+    .cabecera
+        z-index: 100000
+        position: fixed
+        bottom: 0
+        width: 100%
+        border: 3px solid $nav-bg-dark-l
+        border-bottom: 3px solid $nav-bg-dark-s
+        background-color: $nav-bg
+        .navegacion
+            //================================
+            .icono-nav
+                display: none
+            //================================
+            .columna-nav
+                height: 60px
+                display: flex
+                align-items: center
+                justify-content: space-evenly
+                .item-nav
+                    width: 100%
+                    .active
+                        background-color: $nav-bg-dark-l
+                        opacity: 1
+                        // border: 2px solid $nav-bg-dark-s
+                    a
+                        width: 100%
+                        display: flex
+                        justify-content: center
+                        span
+                            display: none
+                        img
+                            opacity: 0.5
+                            display: block
+                            width: 60px
+                            padding: 6px
+                        .img-active
+                            opacity: 0.8
+                            padding: 4px

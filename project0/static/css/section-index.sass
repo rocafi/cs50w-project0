@@ -1,0 +1,234 @@
+$gap: 1rem
+
+// TAMAÑO COMPUTADOR
+@media screen and (min-width:500px)
+    %espaciado-categoria
+        display: flex
+        flex-direction: column
+        gap: $gap
+
+    .contenedor-interno
+        display: grid
+        grid-template-columns: 10fr 5fr
+        grid-template-areas: "article aside"
+        gap: 3rem
+        margin: 4rem 6rem
+        padding: 2rem
+        background-color: $white-bg
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+        .seccion-principal
+            grid-area: article
+            @extend %espaciado-categoria
+
+            .articulos
+                margin: 0 auto
+                width: 90%
+                .geo-img
+                    width: 100%
+                    display: flex
+                    flex-wrap: wrap
+                    img
+                        width: 50%
+                        padding: 1rem
+                .curiosidades
+                    width: 94%
+                    margin: 0 auto
+                    border: 1px solid #949494
+                    padding: 1rem
+                    li
+                        list-style: disc inside
+                img
+                    width: 45%
+                #img-intro
+                    margin-left: 1rem
+                    float: right
+                #img-geografia
+                    margin-right: 1rem
+                    float: left
+        .barra-lateral
+            grid-area: aside
+            flex-direction: column
+            @extend %espaciado-categoria
+
+            .aside-area
+                margin: 0 auto
+                width: 90%
+            .aside-fav
+                img
+                    width: 100%
+            .aside-link-apps
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                a
+                    border: 1px solid transparent
+                    &:hover
+                        border: 1px solid #b6b6b6
+                        text-decoration: underline
+            .compartir-page
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                color: #fff
+                .facebook
+                    background-color: #1873eb
+                    color: #fff
+                .reddit
+                    background-color: #f74300
+                    color: #fff
+                .snapchat
+                    background-color: #fffc08
+                    color: #000
+                .threads
+                    background-color: #2b2b2b
+                    color: #fff
+                a
+                    font-weight: bold
+                    width: 70%
+                    text-align: center
+                    margin: 3px 0
+                    padding: 3px 0
+                    transition: width 0.3s ease-in-out
+                    &:hover
+                        width: 85%
+                        background-color: #000
+                        color: #fff
+            .feedback
+                width: 70%
+                display: flex
+                justify-content: center
+                form
+                    input
+                        font-family: Pixelmix
+                        font-size: 0.7rem
+                        width: 100%
+                        margin-bottom: 3px
+                        padding: 0.4rem 1rem
+                        &:focus
+                            outline-color: $scroll-bg
+                    button
+                        width: 100%
+                        background-color: $scroll-bg
+                        color: #fff
+                        border-color: #364ab9
+                        text-align: center
+                        &:hover
+                            background-color: $green-bar
+                            border-color: $green-bar
+
+// TAMAÑO MOVIL
+@media screen and (max-width:499px)
+    %espaciado
+        display: flex
+        flex-direction: column
+        gap: $gap
+
+    .contenedor-interno
+        display: grid
+        grid-template-rows: repeat(2, auto)
+        grid-template-areas: "article" "aside"
+        padding: 1.5rem
+        background-color: $white-bg
+        gap: 1rem
+        .seccion-principal
+            grid-area: article
+            @extend %espaciado
+
+            .articulos
+                width: 94%
+                margin: 0 auto
+                #img-intro
+                    width: 100%
+                    max-height: 200px
+                    margin-bottom: 1rem
+                #img-geografia
+                    width: 100%
+                    max-height: 200px
+                    margin-bottom: 1rem
+            .geo-img
+                width: 100%
+                display: flex
+                flex-wrap: wrap
+                img
+                    width: 100%
+                    padding: 0.2rem
+            .curiosidades
+                margin: 0 auto
+                border: 1px solid #949494
+                padding: 1rem
+                li
+                    list-style: disc inside
+
+        .barra-lateral
+            grid-area: aside
+            @extend %espaciado
+
+            .aside-area
+                width: 94%
+                margin: 0 auto
+            .aside-fav
+                img
+                    width: 100%
+            .aside-link-apps
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                a
+                    border: 1px solid transparent
+                    &:active
+                        border: 1px solid #b6b6b6
+                        text-decoration: underline
+            .compartir-page
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                color: #fff
+                .facebook
+                    background-color: #1873eb
+                    color: #fff
+                .reddit
+                    background-color: #f74300
+                    color: #fff
+                .snapchat
+                    background-color: #fffc08
+                    color: #000
+                .threads
+                    background-color: #2b2b2b
+                    color: #fff
+                a
+                    font-weight: bold
+                    width: 70%
+                    text-align: center
+                    margin: 3px 0
+                    padding: 3px 0
+                    transition: width 0.3s ease-in-out
+                    &:active
+                        width: 85%
+                        background-color: #000
+                        color: #fff
+            .feedback
+                width: 90%
+                display: flex
+                justify-content: center
+                form
+                    input
+                        font-family: Pixelmix
+                        font-size: 0.7rem
+                        width: 100%
+                        margin-bottom: 3px
+                        padding: 0.4rem 1rem
+                        &:focus
+                            outline-color: $scroll-bg
+                    button
+                        width: 100%
+                        background-color: $scroll-bg
+                        color: #fff
+                        border-color: #364ab9
+                        text-align: center
+                        &:active
+                            background-color: $green-bar
+                            border-color: $green-bar

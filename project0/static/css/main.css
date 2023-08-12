@@ -1,0 +1,746 @@
+@font-face {
+  font-family: "lastNinja";
+  src: url("../fonts/lastninja.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pixelmix";
+  src: url("../fonts/pixelmix.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+img {
+  width: 30px;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.categoria-contenedor {
+  background-color: #c7cac7;
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+}
+.categoria-contenedor .categoria {
+  opacity: 0.9;
+  padding: 8px 15px;
+  background-color: #e8302f;
+  border-radius: 1rem 0 0 1rem;
+  font-family: Pixelmix, Roboto;
+  color: #fff;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 500px) {
+  .contenedor-main {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "section" "footer";
+    position: relative;
+  }
+  .contenedor-main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../img/back.jpg");
+    background-size: 350px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .contenedor-main .cabecera {
+    grid-area: header;
+  }
+  .contenedor-main .contenedor-interno {
+    grid-area: section;
+  }
+  .contenedor-main .pie-de-pagina {
+    grid-area: footer;
+  }
+}
+@media screen and (max-width: 499px) {
+  .contenedor-main {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "section" "footer" "header";
+  }
+  .contenedor-main .cabecera {
+    grid-area: header;
+  }
+  .contenedor-main .contenedor-interno {
+    grid-area: section;
+  }
+  .contenedor-main .pie-de-pagina {
+    font-size: 0.8rem;
+    grid-area: footer;
+    margin-bottom: 62px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .cabecera {
+    border: 3px solid #c01f27;
+    border-bottom: 3px solid #901020;
+    background-color: #e8302f;
+  }
+  .cabecera .navegacion {
+    margin: 0 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cabecera .navegacion .icono-nav {
+    display: flex;
+    align-items: center;
+  }
+  .cabecera .navegacion .icono-nav img {
+    width: 35px;
+    transition: transform 2s ease;
+  }
+  .cabecera .navegacion .icono-nav img:hover {
+    transform: rotate(-360deg);
+  }
+  .cabecera .navegacion .icono-nav span {
+    font-family: LastNinja;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  .cabecera .navegacion .columna-nav {
+    display: flex;
+  }
+  .cabecera .navegacion .columna-nav .item-nav {
+    transition: transform 0.15s ease-in-out;
+  }
+  .cabecera .navegacion .columna-nav .item-nav:hover {
+    transform: scale(1.1);
+  }
+  .cabecera .navegacion .columna-nav .item-nav a span {
+    font-family: Pixelmix;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 0.3rem;
+    color: #fff;
+    border-radius: 1rem;
+    transition: background-color 0.2s ease-in-out;
+    border: 2px solid #c01f27;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a span:hover {
+    background-color: #c01f27;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a img {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  .cabecera {
+    z-index: 100000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 3px solid #c01f27;
+    border-bottom: 3px solid #901020;
+    background-color: #e8302f;
+  }
+  .cabecera .navegacion .icono-nav {
+    display: none;
+  }
+  .cabecera .navegacion .columna-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .cabecera .navegacion .columna-nav .item-nav {
+    width: 100%;
+  }
+  .cabecera .navegacion .columna-nav .item-nav .active {
+    background-color: #c01f27;
+    opacity: 1;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a span {
+    display: none;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a img {
+    opacity: 0.5;
+    display: block;
+    width: 60px;
+    padding: 6px;
+  }
+  .cabecera .navegacion .columna-nav .item-nav a .img-active {
+    opacity: 0.8;
+    padding: 4px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .contenedor-interno .barra-lateral, .contenedor-interno .seccion-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contenedor-interno {
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+    grid-template-areas: "article aside";
+    gap: 3rem;
+    margin: 4rem 6rem;
+    padding: 2rem;
+    background-color: #f7f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .contenedor-interno .seccion-principal {
+    grid-area: article;
+  }
+  .contenedor-interno .seccion-principal .articulos {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .contenedor-interno .seccion-principal .articulos .geo-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenedor-interno .seccion-principal .articulos .geo-img img {
+    width: 50%;
+    padding: 1rem;
+  }
+  .contenedor-interno .seccion-principal .articulos .curiosidades {
+    width: 94%;
+    margin: 0 auto;
+    border: 1px solid #949494;
+    padding: 1rem;
+  }
+  .contenedor-interno .seccion-principal .articulos .curiosidades li {
+    list-style: disc inside;
+  }
+  .contenedor-interno .seccion-principal .articulos img {
+    width: 45%;
+  }
+  .contenedor-interno .seccion-principal .articulos #img-intro {
+    margin-left: 1rem;
+    float: right;
+  }
+  .contenedor-interno .seccion-principal .articulos #img-geografia {
+    margin-right: 1rem;
+    float: left;
+  }
+  .contenedor-interno .barra-lateral {
+    grid-area: aside;
+    flex-direction: column;
+  }
+  .contenedor-interno .barra-lateral .aside-area {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .contenedor-interno .barra-lateral .aside-fav img {
+    width: 100%;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps a {
+    border: 1px solid transparent;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps a:hover {
+    border: 1px solid #b6b6b6;
+    text-decoration: underline;
+  }
+  .contenedor-interno .barra-lateral .compartir-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .facebook {
+    background-color: #1873eb;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .reddit {
+    background-color: #f74300;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .snapchat {
+    background-color: #fffc08;
+    color: #000;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .threads {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page a {
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    margin: 3px 0;
+    padding: 3px 0;
+    transition: width 0.3s ease-in-out;
+  }
+  .contenedor-interno .barra-lateral .compartir-page a:hover {
+    width: 85%;
+    background-color: #000;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .feedback {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+  .contenedor-interno .barra-lateral .feedback form input {
+    font-family: Pixelmix;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 0.4rem 1rem;
+  }
+  .contenedor-interno .barra-lateral .feedback form input:focus {
+    outline-color: #5770f8;
+  }
+  .contenedor-interno .barra-lateral .feedback form button {
+    width: 100%;
+    background-color: #5770f8;
+    color: #fff;
+    border-color: #364ab9;
+    text-align: center;
+  }
+  .contenedor-interno .barra-lateral .feedback form button:hover {
+    background-color: #38c770;
+    border-color: #38c770;
+  }
+}
+@media screen and (max-width: 499px) {
+  .contenedor-interno .barra-lateral, .contenedor-interno .seccion-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contenedor-interno {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "article" "aside";
+    padding: 1.5rem;
+    background-color: #f7f8f8;
+    gap: 1rem;
+  }
+  .contenedor-interno .seccion-principal {
+    grid-area: article;
+  }
+  .contenedor-interno .seccion-principal .articulos {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .contenedor-interno .seccion-principal .articulos #img-intro {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 1rem;
+  }
+  .contenedor-interno .seccion-principal .articulos #img-geografia {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 1rem;
+  }
+  .contenedor-interno .seccion-principal .geo-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenedor-interno .seccion-principal .geo-img img {
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .contenedor-interno .seccion-principal .curiosidades {
+    margin: 0 auto;
+    border: 1px solid #949494;
+    padding: 1rem;
+  }
+  .contenedor-interno .seccion-principal .curiosidades li {
+    list-style: disc inside;
+  }
+  .contenedor-interno .barra-lateral {
+    grid-area: aside;
+  }
+  .contenedor-interno .barra-lateral .aside-area {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .contenedor-interno .barra-lateral .aside-fav img {
+    width: 100%;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps a {
+    border: 1px solid transparent;
+  }
+  .contenedor-interno .barra-lateral .aside-link-apps a:active {
+    border: 1px solid #b6b6b6;
+    text-decoration: underline;
+  }
+  .contenedor-interno .barra-lateral .compartir-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .facebook {
+    background-color: #1873eb;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .reddit {
+    background-color: #f74300;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .snapchat {
+    background-color: #fffc08;
+    color: #000;
+  }
+  .contenedor-interno .barra-lateral .compartir-page .threads {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .compartir-page a {
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    margin: 3px 0;
+    padding: 3px 0;
+    transition: width 0.3s ease-in-out;
+  }
+  .contenedor-interno .barra-lateral .compartir-page a:active {
+    width: 85%;
+    background-color: #000;
+    color: #fff;
+  }
+  .contenedor-interno .barra-lateral .feedback {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .contenedor-interno .barra-lateral .feedback form input {
+    font-family: Pixelmix;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 0.4rem 1rem;
+  }
+  .contenedor-interno .barra-lateral .feedback form input:focus {
+    outline-color: #5770f8;
+  }
+  .contenedor-interno .barra-lateral .feedback form button {
+    width: 100%;
+    background-color: #5770f8;
+    color: #fff;
+    border-color: #364ab9;
+    text-align: center;
+  }
+  .contenedor-interno .barra-lateral .feedback form button:active {
+    background-color: #38c770;
+    border-color: #38c770;
+  }
+}
+.contenedor-pokemon .pokemon-filters {
+  margin: 1rem 0;
+}
+.contenedor-pokemon .pokemon-filters #planta:checked ~ .pokemon-box .fuego,
+.contenedor-pokemon .pokemon-filters #planta:checked ~ .pokemon-box .agua,
+.contenedor-pokemon .pokemon-filters #planta:checked ~ .pokemon-box .normal,
+.contenedor-pokemon .pokemon-filters #planta:checked ~ .pokemon-box .electrico {
+  display: none;
+}
+.contenedor-pokemon .pokemon-filters #agua:checked ~ .pokemon-box .fuego,
+.contenedor-pokemon .pokemon-filters #agua:checked ~ .pokemon-box .planta,
+.contenedor-pokemon .pokemon-filters #agua:checked ~ .pokemon-box .normal,
+.contenedor-pokemon .pokemon-filters #agua:checked ~ .pokemon-box .electrico {
+  display: none;
+}
+.contenedor-pokemon .pokemon-filters #fuego:checked ~ .pokemon-box .agua,
+.contenedor-pokemon .pokemon-filters #fuego:checked ~ .pokemon-box .planta,
+.contenedor-pokemon .pokemon-filters #fuego:checked ~ .pokemon-box .normal,
+.contenedor-pokemon .pokemon-filters #fuego:checked ~ .pokemon-box .electrico {
+  display: none;
+}
+.contenedor-pokemon .pokemon-filters #normal:checked ~ .pokemon-box .agua,
+.contenedor-pokemon .pokemon-filters #normal:checked ~ .pokemon-box .planta,
+.contenedor-pokemon .pokemon-filters #normal:checked ~ .pokemon-box .fuego,
+.contenedor-pokemon .pokemon-filters #normal:checked ~ .pokemon-box .electrico {
+  display: none;
+}
+.contenedor-pokemon .pokemon-filters #electrico:checked ~ .pokemon-box .agua,
+.contenedor-pokemon .pokemon-filters #electrico:checked ~ .pokemon-box .planta,
+.contenedor-pokemon .pokemon-filters #electrico:checked ~ .pokemon-box .normal,
+.contenedor-pokemon .pokemon-filters #electrico:checked ~ .pokemon-box .fuego {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .contenedor-pokemon {
+    margin: 4rem 6rem;
+    padding: 2rem;
+    background-color: #f7f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .contenedor-pokemon .pokemon-box {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card {
+    border: 2px solid transparent;
+    border: 1px solid gray;
+    background: #48d0b0;
+    width: 200px;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .poke {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .poke img {
+    width: 85%;
+    border: 1px solid rgba(110, 110, 110, 0.4588235294);
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos span {
+    padding: 0.2rem 0.6rem;
+    border: 1px solid green;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .planta {
+    background-color: #64bb5c;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .agua {
+    background-color: #4d8fd6;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .fuego {
+    background-color: #fe9c52;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .normal {
+    background-color: #9198a1;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .electrico {
+    background-color: #f4d237;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .name {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    font-family: Pixelmix;
+    font-size: 1.3rem;
+  }
+  .contenedor-pokemon .pokemon-box .planta:hover {
+    border: 2px solid #64bb5c;
+    box-shadow: 0 0 10px #11bb02;
+  }
+  .contenedor-pokemon .pokemon-box .agua:hover {
+    border: 2px solid #4d8fd6;
+    box-shadow: 0 0 10px #0268d4;
+  }
+  .contenedor-pokemon .pokemon-box .fuego:hover {
+    border: 2px solid #fe9c52;
+    box-shadow: 0 0 10px #ff6f01;
+  }
+  .contenedor-pokemon .pokemon-box .normal:hover {
+    border: 2px solid #9198a1;
+    box-shadow: 0 0 10px #014194;
+  }
+  .contenedor-pokemon .pokemon-box .electrico:hover {
+    border: 2px solid #f4d237;
+    box-shadow: 0 0 10px #f5c903;
+  }
+}
+@media screen and (max-width: 499px) {
+  .contenedor-pokemon {
+    padding: 1.5rem;
+    background-color: #f7f8f8;
+  }
+  .contenedor-pokemon .pokemon-box {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card {
+    border: 2px solid transparent;
+    border: 1px solid gray;
+    background: #48d0b0;
+    width: 130px;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .poke {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .poke img {
+    width: 85%;
+    border: 1px solid rgba(110, 110, 110, 0.4588235294);
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos span {
+    gap: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid green;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .planta {
+    background-color: #64bb5c;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .agua {
+    background-color: #4d8fd6;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .fuego {
+    background-color: #fe9c52;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .normal {
+    background-color: #9198a1;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .tipos .electrico {
+    background-color: #f4d237;
+    color: white;
+  }
+  .contenedor-pokemon .pokemon-box .pokemon-card .name {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    font-family: Pixelmix;
+    font-size: 1rem;
+  }
+  .contenedor-pokemon .pokemon-box .planta:active {
+    border: 2px solid #64bb5c;
+    box-shadow: 0 0 10px #11bb02;
+  }
+  .contenedor-pokemon .pokemon-box .agua:active {
+    border: 2px solid #4d8fd6;
+    box-shadow: 0 0 10px #0268d4;
+  }
+  .contenedor-pokemon .pokemon-box .fuego:active {
+    border: 2px solid #fe9c52;
+    box-shadow: 0 0 10px #ff6f01;
+  }
+  .contenedor-pokemon .pokemon-box .normal:active {
+    border: 2px solid #9198a1;
+    box-shadow: 0 0 10px #014194;
+  }
+  .contenedor-pokemon .pokemon-box .electrico:active {
+    border: 2px solid #f4d237;
+    box-shadow: 0 0 10px #f5c903;
+  }
+}
+.head-lideres {
+  background-color: #575857;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+.grid-boots .container .row {
+  padding: 1rem 0;
+}
+
+.col-4,
+.col-3,
+.col-2 {
+  text-align: center;
+}
+
+.contenedor-juegos {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 500px) {
+  .pie-de-pagina {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .pie-de-pagina .contenido-footer {
+    background-color: #575857;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .pie-de-pagina .contenido-footer img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .pie-de-pagina .copy {
+    background-color: #282828;
+    text-align: center;
+    padding: 0.7rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  .pie-de-pagina {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .pie-de-pagina .contenido-footer {
+    background-color: #575857;
+    padding: 2rem;
+  }
+  .pie-de-pagina .contenido-footer img {
+    width: 100%;
+  }
+  .pie-de-pagina .copy {
+    background-color: #282828;
+    text-align: center;
+    padding: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

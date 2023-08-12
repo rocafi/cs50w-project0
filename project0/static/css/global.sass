@@ -1,0 +1,75 @@
+// GLOBALES
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-align: justify
+img
+    width: 30px
+ul, ol
+    list-style: none
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+
+.categoria-contenedor
+    background-color: #c7cac7
+    border-radius: 1rem 0 0 1rem
+    display: flex
+    .categoria
+        opacity: 0.9
+        padding: 8px 15px
+        background-color: $nav-bg
+        border-radius: 1rem 0 0 1rem
+        font-family: Pixelmix, Roboto
+        color: #fff
+        font-style: italic
+        font-size: 0.9rem
+        line-height: 0.9
+        text-transform: uppercase
+
+
+
+// ESTILOS GENERALES
+// TAMAÑO COMPUTADOR
+@media screen and (min-width:500px)
+    .contenedor-main
+        display: grid
+        grid-template-rows: repeat(3, auto)
+        grid-template-areas: "header" "section" "footer"
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-image: url("../img/back.jpg")
+            background-size: 350px
+            opacity: 0.3
+            z-index: -1
+        .cabecera
+            grid-area: header
+        .contenedor-interno
+            grid-area: section
+        .pie-de-pagina
+            grid-area: footer
+
+// TAMAÑO MOVIL
+@media screen and (max-width:499px)
+    .contenedor-main
+        display: grid
+        grid-template-rows: repeat(3, auto)
+        grid-template-areas: "section" "footer" "header"
+
+        .cabecera
+            grid-area: header
+        .contenedor-interno
+            grid-area: section
+        .pie-de-pagina
+            font-size: 0.8rem
+            grid-area: footer
+            margin-bottom: 62px
+

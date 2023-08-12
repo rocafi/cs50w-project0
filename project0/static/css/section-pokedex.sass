@@ -1,0 +1,184 @@
+.contenedor-pokemon
+    .pokemon-filters
+        margin: 1rem 0
+        #planta:checked ~ .pokemon-box .fuego,
+        #planta:checked ~ .pokemon-box .agua,
+        #planta:checked ~ .pokemon-box .normal,
+        #planta:checked ~ .pokemon-box .electrico
+            display: none
+        #agua:checked ~ .pokemon-box .fuego,
+        #agua:checked ~ .pokemon-box .planta,
+        #agua:checked ~ .pokemon-box .normal,
+        #agua:checked ~ .pokemon-box .electrico
+            display: none
+        #fuego:checked ~ .pokemon-box .agua,
+        #fuego:checked ~ .pokemon-box .planta,
+        #fuego:checked ~ .pokemon-box .normal,
+        #fuego:checked ~ .pokemon-box .electrico
+            display: none
+        #normal:checked ~ .pokemon-box .agua,
+        #normal:checked ~ .pokemon-box .planta,
+        #normal:checked ~ .pokemon-box .fuego,
+        #normal:checked ~ .pokemon-box .electrico
+            display: none
+        #electrico:checked ~ .pokemon-box .agua,
+        #electrico:checked ~ .pokemon-box .planta,
+        #electrico:checked ~ .pokemon-box .normal,
+        #electrico:checked ~ .pokemon-box .fuego
+            display: none
+        
+
+
+
+// TAMAÑO COMPUTADOR
+@media screen and (min-width:500px)
+    .contenedor-pokemon
+        margin: 4rem 6rem
+        padding: 2rem
+        background-color: $white-bg
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+        .pokemon-box
+            width: 100%
+            margin-top: 1rem
+            display: flex
+            flex-wrap: wrap
+            gap: 1rem
+            justify-content: center
+            .pokemon-card
+                border: 2px solid transparent
+                border: 1px solid gray
+                background: #48d0b0
+                width: 200px
+                .poke
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    margin-top: 10px
+                    img
+                        width: 85%
+                        border: 1px solid #6e6e6e75
+                .tipos
+                    margin: 0.5rem
+                    display: flex
+                    justify-content: center
+                    gap: 1rem
+                    span
+                        padding: 0.2rem 0.6rem
+                        border:1px solid green
+                    .planta
+                        background-color: #64bb5c
+                        color: white
+                    .agua
+                        background-color: #4d8fd6
+                        color: white
+                    .fuego
+                        background-color: #fe9c52
+                        color: white
+                    .normal
+                        background-color: #9198a1
+                        color: white
+                    .electrico
+                        background-color: #f4d237
+                        color: white
+                .name
+                    display: flex
+                    justify-content: center
+                    margin: 1rem
+                    font-family: Pixelmix
+                    font-size: 1.3rem
+            .planta
+                &:hover
+                    border: 2px solid #64bb5c
+                    box-shadow: 0 0 10px #11bb02
+            .agua
+                &:hover
+                    border: 2px solid #4d8fd6
+                    box-shadow: 0 0 10px #0268d4
+            .fuego
+                &:hover
+                    border: 2px solid #fe9c52
+                    box-shadow: 0 0 10px #ff6f01
+            .normal
+                &:hover
+                    border: 2px solid #9198a1
+                    box-shadow: 0 0 10px #014194
+            .electrico
+                &:hover
+                    border: 2px solid #f4d237
+                    box-shadow: 0 0 10px #f5c903
+
+
+
+@media screen and (max-width:499px)
+    .contenedor-pokemon
+        padding: 1.5rem
+        background-color: $white-bg
+        .pokemon-box
+            width: 100%
+            margin-top: 1rem
+            display: flex
+            flex-wrap: wrap
+            gap: 1rem
+            justify-content: center
+            .pokemon-card
+                border: 2px solid transparent
+                border: 1px solid gray
+                background: #48d0b0
+                width: 130px
+                .poke
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    margin-top: 10px
+                    img
+                        width: 85%
+                        border: 1px solid #6e6e6e75
+                .tipos
+                    margin: 0.5rem
+                    display: flex
+                    justify-content: center
+                    span
+                        gap: 0.5rem
+                        padding: 0.2rem 0.6rem
+                        border:1px solid green
+                    .planta
+                        background-color: #64bb5c
+                        color: white
+                    .agua
+                        background-color: #4d8fd6
+                        color: white
+                    .fuego
+                        background-color: #fe9c52
+                        color: white
+                    .normal
+                        background-color: #9198a1
+                        color: white
+                    .electrico
+                        background-color: #f4d237
+                        color: white
+                .name
+                    display: flex
+                    justify-content: center
+                    margin: 1rem
+                    font-family: Pixelmix
+                    font-size: 1rem
+            .planta
+                &:active
+                    border: 2px solid #64bb5c
+                    box-shadow: 0 0 10px #11bb02
+            .agua
+                &:active
+                    border: 2px solid #4d8fd6
+                    box-shadow: 0 0 10px #0268d4
+            .fuego
+                &:active
+                    border: 2px solid #fe9c52
+                    box-shadow: 0 0 10px #ff6f01
+            .normal
+                &:active
+                    border: 2px solid #9198a1
+                    box-shadow: 0 0 10px #014194
+            .electrico
+                &:active
+                    border: 2px solid #f4d237
+                    box-shadow: 0 0 10px #f5c903
